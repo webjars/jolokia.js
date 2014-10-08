@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jolokia.js</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.2-SNAPSHOT</version>
     <name>Jolokia Client Javascript</name>
     <description>WebJar for Jolokia Java Script Client</description>
     <url>http://webjars.org</url>
@@ -19,12 +19,12 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstream.version>1.2.2</upstream.version>
-	<upstream.url>http://central.maven.org/maven2/org/jolokia/jolokia-client-javascript/${upstream.version}/jolokia-client-javascript-${upstream.version}.jar</upstream.url>
+        <upstream.url>http://central.maven.org/maven2/org/jolokia/jolokia-client-javascript/${upstream.version}/jolokia-client-javascript-${upstream.version}.jar</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${version}</destDir>
         <requirejs>
             {
                 "paths": {
-                    "jolokia.js": "jolokia.js"
+                    "jolokia.js": "jolokia"
                 },
                 "shim": {
                     "jolokia.js": ["jquery"]
@@ -43,8 +43,8 @@
 
     <scm>
         <url>http://github.com/webjars/jolokia.js</url>
-        <connection>scm:git:https://github.com/webjars/jolokia.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/jolokia.git</developerConnection>
+        <connection>scm:git:https://github.com/webjars/jolokia.js.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/jolokia.js.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
@@ -75,8 +75,8 @@
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}">
-					<include name="jolokia*.js" />
-				    </fileset>
+                                        <include name="jolokia*.js" />
+                                     </fileset>
                                 </move>
                             </target>
                         </configuration>
