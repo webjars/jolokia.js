@@ -5,20 +5,20 @@
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
-        <version>7</version>
+        <version>9</version>
     </parent>
     
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jolokia.js</artifactId>
-    <version>1.2.3-SNAPSHOT</version>
+    <version>1.3.2-SNAPSHOT</version>
     <name>Jolokia Client Javascript</name>
     <description>WebJar for Jolokia Java Script Client</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.2.2</upstream.version>
+        <upstream.version>1.3.2</upstream.version>
         <upstream.url>http://central.maven.org/maven2/org/jolokia/jolokia-client-javascript/${upstream.version}/jolokia-client-javascript-${upstream.version}.jar</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${version}</destDir>
         <requirejs>
